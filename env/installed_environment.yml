@@ -1,13 +1,15 @@
-name: multimodal-captions
+name: multimodal-captions-2
 channels:
   - https://repo.anaconda.com/pkgs/main
   - https://repo.anaconda.com/pkgs/r
 dependencies:
+  - datasets
   - python=3.10
+  - pytorch
   - torchvision
   - tqdm
-  - wandb
-  - datasets
   - transformers
-  - pytorch
-prefix: /opt/anaconda3/envs/multimodal-captions
+  - wandb
+  - einops
+  - libjpeg-turbo
+prefix: /opt/anaconda3/envs/multimodal-captions-2
