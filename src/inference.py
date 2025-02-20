@@ -26,4 +26,6 @@ with torch.no_grad():
 # Get most likely tokens and decode
 pred_tokens = torch.argmax(out, dim=-1)
 caption = ds.tk.decode(pred_tokens[0])
+ground_truth = ds.tk.decode(txt[0])
+print("Ground truth:", ground_truth)
 print("Predicted caption:", caption)
