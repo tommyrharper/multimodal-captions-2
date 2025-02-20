@@ -9,10 +9,9 @@ import wandb
 
 
 torch.manual_seed(42)
-dev = torch.device(
-    "mps" if mps.is_available() else "cuda" if cuda.is_available() else "cpu"
-)
-print("device", dev)
+device_type = "mps" if mps.is_available() else "cuda" if cuda.is_available() else "cpu"
+print("device_type", device_type)
+dev = torch.device(device_type)
 ts = datetime.datetime.now().strftime("%Y_%m_%d__%H_%M_%S")
 
 
