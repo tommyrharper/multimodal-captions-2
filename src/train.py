@@ -48,6 +48,7 @@ for epoch in range(5):
         opt.step()
         wandb.log({"loss": loss.item()})
     torch.save(frk.state_dict(), f"./checkpoints/{ts}.{epoch + 1}.frk.pth")
+    wandb.save(f"./checkpoints/{ts}.{epoch + 1}.frk.pth")
 
 
 wandb.finish()
