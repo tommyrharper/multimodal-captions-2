@@ -7,7 +7,11 @@ import wandb
 
 
 torch.manual_seed(42)
-dev = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+dev = torch.device(
+    "mps"
+    if torch.backends.mps.is_available()
+    else "cuda" if torch.cuda.is_available() else "cpu"
+)
 ts = datetime.datetime.now().strftime("%Y_%m_%d__%H_%M_%S")
 
 
