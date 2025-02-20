@@ -2,3 +2,4 @@ __pycache__
 flickr
 .DS_Store
 checkpoints
+wandb
