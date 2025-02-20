@@ -5,11 +5,11 @@ channels:
 dependencies:
   - datasets
   - python=3.10
-  - pytorch
-  - torchvision
   - tqdm
   - transformers
   - wandb
   - einops
   - libjpeg-turbo
+  - pytorch
+  - torchvision
 prefix: /opt/anaconda3/envs/multimodal-captions-2
