@@ -3,14 +3,14 @@ import torch
 import datetime
 from src.dataloader import Flick
 from src.models import Frank
+from torch.backends import mps
+from torch import cuda
 import wandb
 
 
 torch.manual_seed(42)
 dev = torch.device(
-    "mps"
-    if torch.backends.mps.is_available()
-    else "cuda" if torch.cuda.is_available() else "cpu"
+    "mps" if mps.is_available() else "cuda" if cuda.is_available() else "cpu"
 )
 print("device", dev)
 ts = datetime.datetime.now().strftime("%Y_%m_%d__%H_%M_%S")
