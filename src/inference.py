@@ -22,4 +22,5 @@ img = img.to(dev)
 txt = txt.to(dev)
 with torch.no_grad():
     out = frk(img, txt)
-print(out)
+print("out", out)
+print("out.shape", out.shape)
