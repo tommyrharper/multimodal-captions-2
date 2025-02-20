@@ -22,5 +22,8 @@ img = img.to(dev)
 txt = txt.to(dev)
 with torch.no_grad():
     out = frk(img, txt)
-print("out", out)
-print("out.shape", out.shape)
+    
+# Get most likely tokens and decode
+pred_tokens = torch.argmax(out, dim=-1)
+caption = ds.tk.decode(pred_tokens[0])
+print("Predicted caption:", caption)
