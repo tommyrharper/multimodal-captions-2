@@ -47,3 +47,10 @@ if __name__ == "__main__":
     print("tkn", tkn.shape)  # torch.Size([19])
     print("img", img.shape)  # torch.Size([3, 224, 224])
     print("tkn", ds.tk.decode(tkn))
+
+    tkn, img = ds[1]
+    print("len", len(ds))  # trn 29,000 val 1,014 tst 1,000
+    print("txt", tkn)
+    print("tkn", tkn.shape)  # torch.Size([19])
+    print("img", img.shape)  # torch.Size([3, 224, 224])
+    print("tkn", ds.tk.decode(tkn))
